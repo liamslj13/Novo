@@ -1,0 +1,18 @@
+A scrap pad of sorts to design a context free grammar for Novo
+ref. craftinginterpreters.com
+
+expression      -> literal
+                 |  unary
+                 |  binary
+                 |  grouping ;
+
+literal         -> Integer | String | bool | null
+grouping        -> "(" expression ")" ;
+unary           -> ("-" | "!") expression ;
+binary          -> expression operator expression ;
+operator        -> "==" | ">=" | "<=" | "<" | ">"
+                 | "!=" | "%" | "/" | "*" | "+" |
+                 | "-" | "%" ;
+
+
+
