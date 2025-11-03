@@ -34,7 +34,7 @@ enum class TokenType {
   // operators
   Define, // :=
   Equals, // =
-  Arrow, // ->
+  Arrow,  // ->
   Plus,
   Minus,
   Divide,
@@ -47,10 +47,8 @@ enum class TokenType {
   LessThanOrEqual,
   GreaterThan,
   GreaterThanOrEqual,
-  IsEqualTo, // ==
+  IsEqualTo,    // ==
   IsNotEqualTo, // !=
-
-
 
   EndOfFile,
 };

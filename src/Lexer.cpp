@@ -37,12 +37,11 @@ struct Lexer {
       readPos++;
   }
 
-
   char peekChar() const {
-    if (readPos >= input.size()) return '\0';
+    if (readPos >= input.size())
+      return '\0';
     return input[readPos];
   }
-
 
   std::string readString() {
     std::string res;
@@ -225,7 +224,8 @@ struct Lexer {
         if (peekChar() == '=') {
           advancePosition();
           advancePosition();
-          tokens.push_back(Token::newToken(">=", TokenType::GreaterThanOrEqual));
+          tokens.push_back(
+              Token::newToken(">=", TokenType::GreaterThanOrEqual));
           break;
         }
         tokens.push_back(Token::newToken(">", TokenType::GreaterThan));
