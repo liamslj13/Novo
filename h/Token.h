@@ -14,11 +14,6 @@ enum class TokenType {
   Else,     // else
   Return,   // ret
 
-  // type keywords
-  i32_type,
-  i64_type,
-  str_type,
-
   // characters
   LBrace,
   RBrace,
@@ -55,12 +50,12 @@ enum class TokenType {
 };
 
 struct Token {
-  std::string value;
+  std::string literal;
   TokenType type;
 
-  Token(std::string value, TokenType type);
+  Token(std::string literal, TokenType type);
 
-  static Token newToken(std::string value, TokenType type);
+  static Token newToken(std::string literal, TokenType type);
   static std::string tokenTypeToString(TokenType type);
   static std::string toString(const Token &t);
 };

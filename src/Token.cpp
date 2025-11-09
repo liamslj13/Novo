@@ -1,11 +1,11 @@
 #include "../h/Token.h"
 
 namespace Novo {
-Token::Token(std::string value, TokenType type)
-    : value(std::move(value)), type(type) {}
+Token::Token(std::string literal, TokenType type)
+    : literal(std::move(literal)), type(type) {}
 
-Token Token::newToken(std::string value, TokenType type) {
-  return {std::move(value), type};
+Token Token::newToken(std::string literal, TokenType type) {
+  return {std::move(literal), type};
 }
 
 std::string Token::tokenTypeToString(TokenType type) {
@@ -24,12 +24,6 @@ std::string Token::tokenTypeToString(TokenType type) {
     return "Else";
   case TokenType::Return:
     return "Return";
-  case TokenType::i32_type:
-    return "i32_type";
-  case TokenType::i64_type:
-    return "i64_type";
-  case TokenType::str_type:
-    return "str_type";
   case TokenType::Minus:
     return "Minus";
   case TokenType::Plus:
@@ -90,6 +84,6 @@ std::string Token::tokenTypeToString(TokenType type) {
 }
 
 std::string Token::toString(const Token &t) {
-  return "Token(" + tokenTypeToString(t.type) + ", " + t.value + ")";
+  return "Token(" + tokenTypeToString(t.type) + ", " + t.literal + ")";
 }
 } // namespace Novo

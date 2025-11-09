@@ -10,7 +10,8 @@ add_executable(Novo main.cpp
         src/Parser.cpp
         h/Lexer.h
         h/Token.h
-        h/Parser.h)
+        h/Parser.h
+        h/AST.h)
 
 find_package(LLVM REQUIRED CONFIG)
 include_directories(${LLVM_INCLUDE_DIRS})

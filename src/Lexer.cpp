@@ -7,12 +7,6 @@ TokenType Lexer::identifierToTokenType(const std::string &s) {
     return TokenType::Function;
   if (s == "ret")
     return TokenType::Return;
-  if (s == "i32")
-    return TokenType::i32_type;
-  if (s == "i64")
-    return TokenType::i64_type;
-  if (s == "str")
-    return TokenType::str_type;
   if (s == "if")
     return TokenType::If;
   if (s == "else")
