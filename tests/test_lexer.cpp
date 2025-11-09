@@ -2,7 +2,9 @@
 #include <string>
 #include <vector>
 
-#include "../src/Lexer.cpp"
+#include "../h/Lexer.h"
+
+using namespace Novo;
 
 TEST(LexerTests, TokenizeProgram) {
   const std::string input = R"(

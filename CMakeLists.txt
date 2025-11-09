@@ -7,7 +7,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(Novo main.cpp
         src/Lexer.cpp
         src/token.cpp
-        src/Parser.cpp)
+        src/Parser.cpp
+        h/Lexer.h
+        h/Token.h
+        h/Parser.h)
 
 find_package(LLVM REQUIRED CONFIG)
 include_directories(${LLVM_INCLUDE_DIRS})
